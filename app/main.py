@@ -1,6 +1,8 @@
 from flask import Flask, render_template, request
 import app.script as script
 import os
+# import sys
+# import logging
 
 app = Flask(__name__)
 
@@ -20,7 +22,5 @@ def predict():
 def getLatest():
     return render_template('result.html')
 
-
-
-# if __name__ == "__main__":
-#     app.run(host='0.0.0.0')
+# app.logger.addHandler(logging.StreamHandler(sys.stdout))
+# app.logger.setLevel(logging.ERROR)

@@ -74,7 +74,9 @@ def predictStock(stock):
   plt.xlabel('Time')
   plt.ylabel(f'{stocks} Share Price')
   plt.legend()
-  plt.savefig(fr"""{os.getcwd()}\static\hasil.png""")
+
+  dir_path = os.path.dirname(os.path.realpath(__file__))
+  plt.savefig(fr"""{dir_path}\static\hasil.png""")
 
 
   real_data = [model_inputs[len(model_inputs) - prediction_days : len(model_inputs)+1, 0]]
