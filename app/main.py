@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-import script
+import app.script as script
 import os
 
 app = Flask(__name__)
@@ -22,5 +22,5 @@ def getLatest():
 
 
 
-if __name__ == "__main__":
-    app.run(host='0.0.0.0')
+# if __name__ == "__main__":
+#     app.run(host='0.0.0.0')
